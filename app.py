@@ -85,20 +85,41 @@ with tabs[0]:
 # --- MÓDULO 2: MENÚ DE DOPAMINA ---
 with tabs[1]:
     st.header("🍬 Menú de Dopamina")
-    st.caption("Estimulación saludable a la carta. Evita el doom-scrolling.")
+    st.caption("Estimulación saludable a la carta. Carga tu batería ejecutiva.")
     
-    st.subheader("🟢 Entrantes (Baja Fricción)")
+    # SECCIÓN 1: ENTRANTES (Energía Rápida - 5 min)
+    st.subheader("🟢 Entrantes (Activación)")
     c1, c2, c3 = st.columns(3)
-    if c1.button("💧 Beber Agua Fría"): st.toast("¡Hidratación iniciada!")
-    if c2.button("🤸 10 Saltos"): st.toast("¡Norepinefrina activada!")
-    if c3.button("🎧 Música Épica"): st.markdown("[Abrir Playlist Spotify](https://open.spotify.com)")
-
-    st.subheader("🟠 Plato Fuerte (Flujo)")
-    c4, c5 = st.columns(2)
-    if c4.button("🎸 Guitarra"): st.success("¡A tocar!")
-    if c5.button("💻 Código"): st.success("¡A picar teclas!")
     
-    st.subheader("🔴 Postre (Alto Riesgo)")
+    if c1.button("💃 Bailar"): 
+        st.toast("¡Movimiento activado! (Sube el volumen)")
+        
+    if c2.button("🎤 Cantar"): 
+        st.toast("¡Liberando estrés! (A todo pulmón)")
+        
+    if c3.button("💧 Beber Agua"): 
+        st.toast("¡Cerebro hidratado!")
+
+    # SECCIÓN 2: PLATO FUERTE (Tus Intereses Reales)
+    st.subheader("🟠 Plato Fuerte (Flujo Profundo)")
+    c4, c5, c6 = st.columns(3)
+    
+    if c4.button("📚 Leer"): 
+        st.success("¡Hora de viajar a otros mundos!")
+    
+    if c5.button("✍️ Escribir"): 
+        st.success("¡Plasma tus ideas!")
+        
+    if c6.button("🎮 Jugar"): 
+        st.success("¡Modo Estrategia activado!")
+    
+    # SECCIÓN 3: POSTRE (Recompensa Final)
+    st.subheader("🔴 Postre (El Premio)")
+    
+    # Un botón grande para el premio final
+    if st.button("🎬 Ver Serie / Película", type="primary"):
+        st.balloons() # ¡Efecto de celebración visual!
+        st.info("¡Disfruta! Te lo has ganado. (Recuerda poner una alarma de fin si tienes que madrugar).")    
     if st.button("📱 Redes Sociales (Bloqueado)"):
         st.error("⚠️ Espera... ¿Ya te comiste el plato fuerte? (Fricción añadida)")
 
